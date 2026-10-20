@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b0nngsw2ichdw"]
+
+[ext_resource type="Texture2D" uid="uid://bn2wqgqltj380" path="res://assets/pixelart/NoteButtonHover.aseprite" id="1_5bqns"]
+[ext_resource type="Script" uid="uid://dmu5pmflggwkm" path="res://ui/components/note_buttons/note_button.gd" id="2_lhi8v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mgwb"]
+bg_color = Color(0.14117648, 0.21176471, 0.29411766, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_foph0"]
+bg_color = Color(0.3372549, 0.8666667, 0.9411765, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhl0j"]
+texture = ExtResource("1_5bqns")
+
+[node name="A#_Note" type="Button" unique_id=314289326]
+offset_right = 46.0
+offset_bottom = 23.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_7mgwb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_foph0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yhl0j")
+text = "A#"
+script = ExtResource("2_lhi8v")

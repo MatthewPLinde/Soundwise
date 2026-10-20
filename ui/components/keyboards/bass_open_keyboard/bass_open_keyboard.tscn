@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://rrmmd783qttx"]
+
+[ext_resource type="PackedScene" uid="uid://cbfvkoja474bs" path="res://ui/components/note_buttons/e_note/e_note.tscn" id="1_gmmp5"]
+[ext_resource type="PackedScene" uid="uid://df4tffqc8ysbi" path="res://ui/components/note_buttons/a_note/a_note.tscn" id="2_ox87e"]
+[ext_resource type="PackedScene" uid="uid://fhve5k3e0cft" path="res://ui/components/note_buttons/d_note/d_note.tscn" id="3_6xes8"]
+[ext_resource type="PackedScene" uid="uid://cpahiaofwgdok" path="res://ui/components/note_buttons/g_note/g_note.tscn" id="4_e4w4m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdt6o"]
+bg_color = Color(0.0627451, 0.10980392, 0.17254902, 1)
+
+[node name="Bass_Open_Keyboard" type="Panel" unique_id=835071209 groups=["keyboards"]]
+offset_right = 44.0
+offset_bottom = 60.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bdt6o")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1430274109]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=745269767]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="E_Note" parent="MarginContainer/GridContainer" unique_id=314289326 instance=ExtResource("1_gmmp5")]
+layout_mode = 2
+
+[node name="A_Note" parent="MarginContainer/GridContainer" unique_id=2033209223 instance=ExtResource("2_ox87e")]
+layout_mode = 2
+
+[node name="D_Note" parent="MarginContainer/GridContainer" unique_id=341803876 instance=ExtResource("3_6xes8")]
+layout_mode = 2
+
+[node name="G_Note" parent="MarginContainer/GridContainer" unique_id=1632236405 instance=ExtResource("4_e4w4m")]
+layout_mode = 2

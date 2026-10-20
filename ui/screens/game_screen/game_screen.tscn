@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d2pfmc2ksoduw"]
+
+[ext_resource type="Script" uid="uid://ch3jqlskxqmm5" path="res://ui/screens/game_screen/game_screen.gd" id="1_agkrw"]
+[ext_resource type="PackedScene" uid="uid://bqwljv3ccoxjm" path="res://ui/components/fretboard/bass_fretboard.tscn" id="1_g1wck"]
+
+[node name="GameScreen" type="Control" unique_id=2062681442]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_agkrw")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1811935504]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=724103039]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2019491987]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="InstructionLabel" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=987999409]
+layout_mode = 2
+text = "Listen & Select Note"
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/Header" unique_id=928207642]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=70529833]
+layout_mode = 2
+text = "0"
+
+[node name="StreakLabel" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=912662148]
+layout_mode = 2
+text = "0"
+
+[node name="BassFretboard" parent="MarginContainer/VBoxContainer" unique_id=409206160 instance=ExtResource("1_g1wck")]
+custom_minimum_size = Vector2(600, 180)
+layout_mode = 2
+
+[node name="KeyboardContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer" unique_id=1545904325]
+layout_mode = 2
+size_flags_vertical = 3

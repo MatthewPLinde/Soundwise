@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cd700ef6bphf"]
+
+[ext_resource type="PackedScene" uid="uid://df4tffqc8ysbi" path="res://ui/components/note_buttons/a_note/a_note.tscn" id="1_cc43h"]
+[ext_resource type="PackedScene" uid="uid://b0nngsw2ichdw" path="res://ui/components/note_buttons/a#_note/a#_note.tscn" id="2_yu57g"]
+[ext_resource type="PackedScene" uid="uid://b3paub8bb1sit" path="res://ui/components/note_buttons/b_note/b_note.tscn" id="3_mkffw"]
+[ext_resource type="PackedScene" uid="uid://b054ffvucmgpe" path="res://ui/components/note_buttons/c_note/c_note.tscn" id="4_ohy8e"]
+[ext_resource type="PackedScene" uid="uid://cinipqur6ewex" path="res://ui/components/note_buttons/c#_note/c#_note.tscn" id="5_hiqqg"]
+[ext_resource type="PackedScene" uid="uid://fhve5k3e0cft" path="res://ui/components/note_buttons/d_note/d_note.tscn" id="6_mnj4g"]
+[ext_resource type="PackedScene" uid="uid://cgdan0xkl6m1j" path="res://ui/components/note_buttons/d#_note/d#_note.tscn" id="7_38rt0"]
+[ext_resource type="PackedScene" uid="uid://cbfvkoja474bs" path="res://ui/components/note_buttons/e_note/e_note.tscn" id="8_3mk6q"]
+[ext_resource type="PackedScene" uid="uid://cc4d6r2l53rlc" path="res://ui/components/note_buttons/f_note/f_note.tscn" id="9_yh6de"]
+[ext_resource type="PackedScene" uid="uid://doalyra24vi1i" path="res://ui/components/note_buttons/f#_note/f#_note.tscn" id="10_n7dvh"]
+[ext_resource type="PackedScene" uid="uid://cpahiaofwgdok" path="res://ui/components/note_buttons/g_note/g_note.tscn" id="11_ctnuq"]
+[ext_resource type="PackedScene" uid="uid://d2hi1it7y00fv" path="res://ui/components/note_buttons/g#_note/g#_note.tscn" id="12_83338"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cc43h"]
+bg_color = Color(0.0627451, 0.10980392, 0.17254902, 1)
+
+[node name="Bass_All_Keyboard" type="Panel" unique_id=1133581484 groups=["keyboards"]]
+offset_right = 107.0
+offset_bottom = 86.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cc43h")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=392217019]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=1118227759]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 4
+
+[node name="A_Note" parent="MarginContainer/GridContainer" unique_id=314289326 instance=ExtResource("1_cc43h")]
+layout_mode = 2
+
+[node name="A#_Note" parent="MarginContainer/GridContainer" unique_id=1347590910 instance=ExtResource("2_yu57g")]
+layout_mode = 2
+
+[node name="B_Note" parent="MarginContainer/GridContainer" unique_id=138929048 instance=ExtResource("3_mkffw")]
+layout_mode = 2
+
+[node name="C_Note" parent="MarginContainer/GridContainer" unique_id=2130914084 instance=ExtResource("4_ohy8e")]
+layout_mode = 2
+
+[node name="C#_Note" parent="MarginContainer/GridContainer" unique_id=620946190 instance=ExtResource("5_hiqqg")]
+layout_mode = 2
+
+[node name="D_Note" parent="MarginContainer/GridContainer" unique_id=959139822 instance=ExtResource("6_mnj4g")]
+layout_mode = 2
+
+[node name="D#_Note" parent="MarginContainer/GridContainer" unique_id=1285014218 instance=ExtResource("7_38rt0")]
+layout_mode = 2
+
+[node name="E_Note" parent="MarginContainer/GridContainer" unique_id=2119837870 instance=ExtResource("8_3mk6q")]
+layout_mode = 2
+
+[node name="F_Note" parent="MarginContainer/GridContainer" unique_id=1665033578 instance=ExtResource("9_yh6de")]
+layout_mode = 2
+
+[node name="F#_Note" parent="MarginContainer/GridContainer" unique_id=1190757206 instance=ExtResource("10_n7dvh")]
+layout_mode = 2
+
+[node name="G_Note" parent="MarginContainer/GridContainer" unique_id=1440629029 instance=ExtResource("11_ctnuq")]
+layout_mode = 2
+
+[node name="G#_Note" parent="MarginContainer/GridContainer" unique_id=597883839 instance=ExtResource("12_83338")]
+layout_mode = 2

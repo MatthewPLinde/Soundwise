@@ -1,0 +1,1380 @@
+[gd_scene format=3 uid="uid://bqwljv3ccoxjm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdt6o"]
+bg_color = Color(0.0627451, 0.10980392, 0.17254902, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="BassFretboard" type="Control" unique_id=409206160]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 180.0
+
+[node name="BoardPanel" type="Panel" parent="." unique_id=416360220]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bdt6o")
+
+[node name="Strings" type="VBoxContainer" parent="BoardPanel" unique_id=200482722]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="G" type="Control" parent="BoardPanel/Strings" unique_id=651105074]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="StringLine" type="ColorRect" parent="BoardPanel/Strings/G" unique_id=876715657]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14117648, 0.21176471, 0.29411766, 1)
+
+[node name="Frets" type="HBoxContainer" parent="BoardPanel/Strings/G" unique_id=2074677012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="0" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1481651049]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/0" unique_id=1069116141]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="1" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1798699507]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/1" unique_id=1795393170]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="2" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=388805246]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/2" unique_id=348902766]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="3" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1228762238]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/3" unique_id=1764154121]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="4" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=168368758]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/4" unique_id=1677394656]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="5" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1169836045]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/5" unique_id=679352531]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="6" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1450487992]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/6" unique_id=1524342466]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="7" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1141474609]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/7" unique_id=1861900981]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="8" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1062833704]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/8" unique_id=1150287230]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="9" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1751824362]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/9" unique_id=792967708]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="10" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1005894757]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/10" unique_id=1564008246]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="11" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1353509618]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/11" unique_id=510330474]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="12" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=216773326]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/12" unique_id=1740977107]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="13" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1601340028]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/13" unique_id=1546276617]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="14" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1468119550]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/14" unique_id=909044113]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="15" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=206727767]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/15" unique_id=214265289]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="16" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=79617288]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/16" unique_id=1288076987]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="17" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=634441347]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/17" unique_id=447260655]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="18" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=427686755]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/18" unique_id=1237843298]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="19" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1059289462]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/19" unique_id=1980837343]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="20" type="Control" parent="BoardPanel/Strings/G/Frets" unique_id=1857491111]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/G/Frets/20" unique_id=1207082040]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="D" type="Control" parent="BoardPanel/Strings" unique_id=1504508145]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="StringLine" type="ColorRect" parent="BoardPanel/Strings/D" unique_id=508813106]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14117648, 0.21176471, 0.29411766, 1)
+
+[node name="Frets" type="HBoxContainer" parent="BoardPanel/Strings/D" unique_id=1630143570]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="0" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=1405379010]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/0" unique_id=395642152]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="1" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=1333338371]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/1" unique_id=155923831]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="2" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=909574966]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/2" unique_id=42429691]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="3" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=658930312]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/3" unique_id=945164876]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="4" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=213742050]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/4" unique_id=1042299298]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="5" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=1253036230]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/5" unique_id=734435045]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="6" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=548435307]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/6" unique_id=1405794410]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="7" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=1925321764]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/7" unique_id=315876767]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="8" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=1509676048]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/8" unique_id=1749231031]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="9" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=2086193923]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/9" unique_id=625899304]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="10" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=336408510]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/10" unique_id=587015997]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="11" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=2044224309]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/11" unique_id=1057784016]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="12" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=1399650415]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/12" unique_id=1316241101]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="13" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=837435986]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/13" unique_id=905561939]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="14" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=1402786225]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/14" unique_id=59147344]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="15" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=559591244]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/15" unique_id=206018383]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="16" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=632220697]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/16" unique_id=1163899339]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="17" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=1461764844]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/17" unique_id=114138115]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="18" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=1655652741]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/18" unique_id=2010226425]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="19" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=686820023]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/19" unique_id=1039271063]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="20" type="Control" parent="BoardPanel/Strings/D/Frets" unique_id=867881019]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/D/Frets/20" unique_id=2110376732]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="A" type="Control" parent="BoardPanel/Strings" unique_id=547131119]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="StringLine" type="ColorRect" parent="BoardPanel/Strings/A" unique_id=479673707]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14117648, 0.21176471, 0.29411766, 1)
+
+[node name="Frets" type="HBoxContainer" parent="BoardPanel/Strings/A" unique_id=1134738390]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="0" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=1144153157]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/0" unique_id=808398173]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="1" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=1158666971]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/1" unique_id=1002997550]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="2" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=64381869]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/2" unique_id=1202438127]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="3" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=1890812341]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/3" unique_id=1471769572]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="4" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=103193290]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/4" unique_id=1909300711]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="5" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=396650379]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/5" unique_id=1391811079]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="6" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=1829316240]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/6" unique_id=633558344]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="7" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=523100457]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/7" unique_id=1494545927]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="8" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=1864150189]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/8" unique_id=815072205]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="9" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=1356899274]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/9" unique_id=1376214769]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="10" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=53698482]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/10" unique_id=625682935]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="11" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=964841905]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/11" unique_id=1285976733]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="12" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=792277954]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/12" unique_id=432381388]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="13" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=610572802]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/13" unique_id=133197637]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="14" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=1596850475]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/14" unique_id=1204550426]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="15" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=2006133645]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/15" unique_id=1005508307]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="16" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=89832127]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/16" unique_id=46138319]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="17" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=322500109]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/17" unique_id=198650513]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="18" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=1091314534]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/18" unique_id=288572416]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="19" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=1338069455]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/19" unique_id=11855069]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="20" type="Control" parent="BoardPanel/Strings/A/Frets" unique_id=1696775703]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/A/Frets/20" unique_id=1089322181]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="E" type="Control" parent="BoardPanel/Strings" unique_id=304477975]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="StringLine" type="ColorRect" parent="BoardPanel/Strings/E" unique_id=1851661198]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14117648, 0.21176471, 0.29411766, 1)
+
+[node name="Frets" type="HBoxContainer" parent="BoardPanel/Strings/E" unique_id=586502733]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="0" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=531849823]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/0" unique_id=130271334]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="1" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=1046123796]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/1" unique_id=2145527139]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="2" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=1682817569]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/2" unique_id=132696249]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="3" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=184835854]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/3" unique_id=918853859]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="4" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=17622530]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/4" unique_id=2111988247]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="5" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=1084585317]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/5" unique_id=2057362305]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="6" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=576877664]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/6" unique_id=351226408]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="7" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=323710422]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/7" unique_id=1527067571]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="8" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=420310001]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/8" unique_id=598164151]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="9" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=615557513]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/9" unique_id=991781352]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="10" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=532497508]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/10" unique_id=114940510]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="11" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=1793462946]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/11" unique_id=1754329067]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="12" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=1496760596]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/12" unique_id=1175815861]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="13" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=292877838]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/13" unique_id=1135487112]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="14" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=1821476806]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/14" unique_id=1376761706]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="15" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=841308217]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/15" unique_id=10335517]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="16" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=1196879024]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/16" unique_id=372668219]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="17" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=991279048]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/17" unique_id=653974811]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="18" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=761729640]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/18" unique_id=983019657]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="19" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=568493116]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/19" unique_id=707574059]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
+
+[node name="20" type="Control" parent="BoardPanel/Strings/E/Frets" unique_id=533816927]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FretLine" type="ColorRect" parent="BoardPanel/Strings/E/Frets/20" unique_id=870206037]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.20392157, 0.29411766, 0.3882353, 1)
