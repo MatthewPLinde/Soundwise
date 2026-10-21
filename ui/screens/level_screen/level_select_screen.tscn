@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://cjwe4btrajtbv"]
+
+[ext_resource type="Script" uid="uid://du3256ohbfowb" path="res://ui/screens/level_screen/level_select_screen.gd" id="1_uqw60"]
+
+[node name="LevelSelectScreen" type="Control" unique_id=795770456]
+custom_minimum_size = Vector2(60, 20)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uqw60")
+
+[node name="Title" type="Label" parent="." unique_id=967502129]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1399766027]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -174.0
+offset_right = 214.0
+offset_bottom = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContentBox" type="VBoxContainer" parent="CenterContainer" unique_id=1714440449]
+layout_mode = 2
+
+[node name="LevelGrid" type="GridContainer" parent="CenterContainer/ContentBox" unique_id=2119109752]
+layout_mode = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
+columns = 3
+
+[node name="Level1Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=359854423]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+text = "1"
+
+[node name="Level2Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=1141956687]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+text = "2"
+
+[node name="Level3Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=1940969282]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+text = "3"
+
+[node name="Level4Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=2031282847]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+text = "4"
+
+[node name="Level5Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=1169896266]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+text = "5"
+
+[node name="Level6Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=1433886423]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+text = "6"
+
+[node name="Spacer" type="Control" parent="CenterContainer/ContentBox" unique_id=1346378471]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/ContentBox" unique_id=1029585879]
+layout_mode = 2
+alignment = 1
+
+[node name="PrevButton" type="Button" parent="CenterContainer/ContentBox/HBoxContainer" unique_id=1291413046]
+custom_minimum_size = Vector2(60, 20)
+layout_mode = 2
+text = "<-"
+
+[node name="NavSpacer" type="Control" parent="CenterContainer/ContentBox/HBoxContainer" unique_id=709903143]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="NextButton" type="Button" parent="CenterContainer/ContentBox/HBoxContainer" unique_id=1420680662]
+custom_minimum_size = Vector2(60, 20)
+layout_mode = 2
+text = "->"

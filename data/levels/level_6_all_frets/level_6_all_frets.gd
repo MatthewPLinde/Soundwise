@@ -25,10 +25,6 @@ var quiz = [
 	{"string": "E", "fret": 18, "note": "A#"},
 	{"string": "E", "fret": 19, "note": "B"},
 	{"string": "E", "fret": 20, "note": "C"},
-	{"string": "E", "fret": 21, "note": "C#"},
-	{"string": "E", "fret": 22, "note": "D"},
-	{"string": "E", "fret": 23, "note": "D#"},
-	{"string": "E", "fret": 24, "note": "E"},
 
 	# A string
 	{"string": "A", "fret": 0, "note": "A"},
@@ -52,10 +48,6 @@ var quiz = [
 	{"string": "A", "fret": 18, "note": "D#"},
 	{"string": "A", "fret": 19, "note": "E"},
 	{"string": "A", "fret": 20, "note": "F"},
-	{"string": "A", "fret": 21, "note": "F#"},
-	{"string": "A", "fret": 22, "note": "G"},
-	{"string": "A", "fret": 23, "note": "G#"},
-	{"string": "A", "fret": 24, "note": "A"},
 
 	# D string
 	{"string": "D", "fret": 0, "note": "D"},
@@ -79,10 +71,6 @@ var quiz = [
 	{"string": "D", "fret": 18, "note": "G#"},
 	{"string": "D", "fret": 19, "note": "A"},
 	{"string": "D", "fret": 20, "note": "A#"},
-	{"string": "D", "fret": 21, "note": "B"},
-	{"string": "D", "fret": 22, "note": "C"},
-	{"string": "D", "fret": 23, "note": "C#"},
-	{"string": "D", "fret": 24, "note": "D"},
 
 	# G string
 	{"string": "G", "fret": 0, "note": "G"},
@@ -105,11 +93,7 @@ var quiz = [
 	{"string": "G", "fret": 17, "note": "C"},
 	{"string": "G", "fret": 18, "note": "C#"},
 	{"string": "G", "fret": 19, "note": "D"},
-	{"string": "G", "fret": 20, "note": "D#"},
-	{"string": "G", "fret": 21, "note": "E"},
-	{"string": "G", "fret": 22, "note": "F"},
-	{"string": "G", "fret": 23, "note": "F#"},
-	{"string": "G", "fret": 24, "note": "G"}
+	{"string": "G", "fret": 20, "note": "D#"}
 ]
 
 var question: Dictionary = {}
@@ -118,10 +102,11 @@ var points: int = 0
 var count: int = 0
 var original_string_color: Color
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	EventBus.note_button_pressed.connect(_on_note_button_pressed)
 	start_question()
+
 
 func start_question() -> void:
 	if quiz.is_empty():
@@ -130,28 +115,53 @@ func start_question() -> void:
 	
 	question = quiz.pick_random()
 	
-	var string_name_text: String = str(question["string"])
-	var string = strings.get_node(string_name_text)
-	
-	original_string_color = strings.color
-	string.color = Color("#56DDF0")
+	var fret_line = get_active_fret_line()
+	if fret_line == null:
+		print("Error: Could not find fret node for string %s, fret %d" % [question["string"], question["fret"]])
+		return
+		
+	original_string_color = fret_line.color
+	fret_line.color = Color("#56DDF0")
 
 
 func _on_note_button_pressed(note_name: String) -> void:
-	pass
-
+	if question.is_empty():
+		return
+	
+	# .strip_edges() removes hidden newlines and spaces from the text
+	answer = note_name.strip_edges()
+	check_answer()
 
 func check_answer() -> void:
-	pass
+	if answer == question["note"]:
+		points += 1
+	
+	count += 1
+	
+	var fret_line = get_active_fret_line()
+	if fret_line != null:
+		fret_line.color = original_string_color
+	
+	quiz.erase(question)
+	question = {}
+	
+	next_question()
 
 
 func next_question() -> void:
-	pass
+	if not quiz.is_empty():
+		start_question()
+	else:
+		end_level()
 
 
 func end_level() -> void:
-	pass
+	question = {}
+	print("You got %d/%d correct!" % [points, count])
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+func get_active_fret_line() -> Node:
+	if question.is_empty():
+		return null
+	var path: String = "%s/Frets/%d/FretLine" % [question["string"], question["fret"]]
+	return strings.get_node_or_null(path)

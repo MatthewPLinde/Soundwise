@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c5yhorjomwmb5"]
+
+[ext_resource type="Script" uid="uid://cpu06ehyyq2k1" path="res://ui/screens/start_screen/start_screen.gd" id="1_j1dnn"]
+
+[node name="StartScreen" type="Control" unique_id=693106451]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j1dnn")
+
+[node name="Title" type="Label" parent="." unique_id=1646762160]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.0
+offset_right = 42.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Soundwise"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=71259277]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonBox" type="VBoxContainer" parent="CenterContainer" unique_id=78180210]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="CenterContainer/ButtonBox" unique_id=1059023618]
+layout_mode = 2
+text = "Start"
+
+[node name="Space" type="Control" parent="CenterContainer/ButtonBox" unique_id=520217175]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/ButtonBox" unique_id=227384934]
+layout_mode = 2
+text = "Settings"

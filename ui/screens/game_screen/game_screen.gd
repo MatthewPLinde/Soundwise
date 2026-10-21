@@ -1,6 +1,7 @@
 extends Control
 
 @onready var keyboard_container: CenterContainer = $MarginContainer/VBoxContainer/KeyboardContainer
+
 const BASS_ALL_KEYBOARD = preload("uid://cd700ef6bphf")
 const BASS_OPEN_KEYBOARD = preload("uid://rrmmd783qttx")
 const LEVEL_1_OPEN = preload("uid://bpx1gad45he8b")
@@ -8,11 +9,19 @@ const LEVEL_2_E = preload("uid://qklp7mphktfn")
 const LEVEL_3_A = preload("uid://q6ivgal7xrki")
 const LEVEL_4_D = preload("uid://c72q06b77n46s")
 const LEVEL_5_G = preload("uid://c7lpeouovxvsh")
+const LEVEL_6_ALL_FRETS = preload("uid://cap4nbqqnrc0a")
 
-var current_level : int = 1
+var current_level: int
+
 
 func _ready() -> void:
-	EventBus.current_level_selected.emit(current_level)
+	EventBus.current_level_selected.connect(_on_current_level_selected)
+	# Reads the level number stored in EventBus immediately when the scene loads
+	_on_current_level_selected(EventBus.current_level)
+
+
+func _on_current_level_selected(level: int) -> void:
+	current_level = level
 	
 	match current_level:
 		1: level_1()
@@ -20,8 +29,10 @@ func _ready() -> void:
 		3: level_3()
 		4: level_4()
 		5: level_5()
+		6: level_6()
 
-func level_1():
+
+func level_1() -> void:
 	clear_current_level()
 	
 	var keyboard = BASS_OPEN_KEYBOARD.instantiate()
@@ -30,7 +41,8 @@ func level_1():
 	var level = LEVEL_1_OPEN.instantiate()
 	add_child(level)
 
-func level_2():
+
+func level_2() -> void:
 	clear_current_level()
 	
 	var keyboard = BASS_ALL_KEYBOARD.instantiate()
@@ -39,7 +51,8 @@ func level_2():
 	var level = LEVEL_2_E.instantiate()
 	add_child(level)
 
-func level_3():
+
+func level_3() -> void:
 	clear_current_level()
 	
 	var keyboard = BASS_ALL_KEYBOARD.instantiate()
@@ -48,7 +61,8 @@ func level_3():
 	var level = LEVEL_3_A.instantiate()
 	add_child(level)
 
-func level_4():
+
+func level_4() -> void:
 	clear_current_level()
 	
 	var keyboard = BASS_ALL_KEYBOARD.instantiate()
@@ -57,7 +71,8 @@ func level_4():
 	var level = LEVEL_4_D.instantiate()
 	add_child(level)
 
-func level_5():
+
+func level_5() -> void:
 	clear_current_level()
 	
 	var keyboard = BASS_ALL_KEYBOARD.instantiate()
@@ -66,7 +81,18 @@ func level_5():
 	var level = LEVEL_5_G.instantiate()
 	add_child(level)
 
-func clear_current_level():
+
+func level_6() -> void:
+	clear_current_level()
+	
+	var keyboard = BASS_ALL_KEYBOARD.instantiate()
+	keyboard_container.add_child(keyboard)
+	
+	var level = LEVEL_6_ALL_FRETS.instantiate()
+	add_child(level)
+
+
+func clear_current_level() -> void:
 	for level in get_tree().get_nodes_in_group("levels"):
 		if level.get_parent() == self:
 			level.queue_free()
