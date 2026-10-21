@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cap4nbqqnrc0a"]
+
+[ext_resource type="Script" uid="uid://oragagwvpyur" path="res://data/levels/level_6_all_frets/level_6_all_frets.gd" id="1_gpiqm"]
+
+[node name="Level6AllFrets" type="Node" unique_id=630140550]
+script = ExtResource("1_gpiqm")
