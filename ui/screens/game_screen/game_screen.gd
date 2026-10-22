@@ -2,6 +2,7 @@ extends Control
 
 @onready var keyboard_container: CenterContainer = $MarginContainer/VBoxContainer/KeyboardContainer
 
+const GAME_SCREEN = preload("uid://d2pfmc2ksoduw")
 const BASS_ALL_KEYBOARD = preload("uid://cd700ef6bphf")
 const BASS_OPEN_KEYBOARD = preload("uid://rrmmd783qttx")
 const LEVEL_1_OPEN = preload("uid://bpx1gad45he8b")
@@ -100,3 +101,6 @@ func clear_current_level() -> void:
 	for keyboard in get_tree().get_nodes_in_group("keyboards"):
 		if keyboard.get_parent() == keyboard_container:
 			keyboard.queue_free()
+
+func end_level() -> void:
+	get_tree().change_scene_to_packed(GAME_SCREEN)
