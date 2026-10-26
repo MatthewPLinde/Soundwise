@@ -1,14 +1,11 @@
 extends Button
 
+@export var note_name: String = ""
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pressed.connect(_note_button_pressed)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func _note_button_pressed():
-	var note_name : String = get_text()
-	EventBus.note_button_pressed.emit(note_name)
+func _note_button_pressed() -> void:
+	# If note_name export is blank in the Inspector, fall back to button text
+	var note_to_send: String = note_name if not note_name.is_empty() else text
+	EventBus.note_button_pressed.emit(self, note_to_send.strip_edges())

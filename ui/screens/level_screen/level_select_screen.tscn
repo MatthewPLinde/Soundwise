@@ -21,7 +21,7 @@ offset_left = -45.5
 offset_right = 45.5
 offset_bottom = 23.0
 grow_horizontal = 2
-text = "Pick A Level"
+text = "Pick a Level"
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1399766027]
 layout_mode = 1
@@ -49,32 +49,38 @@ columns = 3
 [node name="Level1Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=359854423]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
-text = "1"
+text = "1
+Open Strings"
 
 [node name="Level2Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=1141956687]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
-text = "2"
+text = "2
+E Frets"
 
 [node name="Level3Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=1940969282]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
-text = "3"
+text = "3
+A Frets"
 
 [node name="Level4Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=2031282847]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
-text = "4"
+text = "4
+D Frets"
 
 [node name="Level5Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=1169896266]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
-text = "5"
+text = "5
+G Frets"
 
 [node name="Level6Button" type="Button" parent="CenterContainer/ContentBox/LevelGrid" unique_id=1433886423]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
-text = "6"
+text = "6
+All Frets"
 
 [node name="Spacer" type="Control" parent="CenterContainer/ContentBox" unique_id=1346378471]
 custom_minimum_size = Vector2(0, 25)

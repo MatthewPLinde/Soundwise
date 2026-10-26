@@ -2,91 +2,63 @@ extends Node
 
 @onready var strings = $"../MarginContainer/VBoxContainer/BassFretboard/BoardPanel/Strings"
 
-# The notes that can be asked in Level 1.
-# This array will be modified as questions are answered.
+# String-based level questions
 var quiz = ["E", "A", "D", "G"]
-
-# The note the game is asking the player to identify.
 var question: String = ""
-
-# The note selected by the player.
 var answer: String = ""
-
-# The number of correct answers.
 var points: int = 0
-
-# The total number of questions answered.
 var count: int = 0
-
-# The original colour of the string before highlighting.
 var original_string_color: Color
-
-# Keeps track of the previously highlighted string.
-var previous_question: String = ""
 
 
 func _ready() -> void:
-	# Listen for note button presses from the EventBus.
 	EventBus.note_button_pressed.connect(_on_note_button_pressed)
-
-	# Start the first question.
 	start_question()
 
 
 func start_question() -> void:
-	# End the level if there are no questions left.
 	if quiz.is_empty():
 		end_level()
 		return
 
-	# Choose a random note from the remaining questions.
 	question = quiz.pick_random()
 
-	# Remember the string's original colour before highlighting it.
 	var string_line = strings.get_node(question).get_node("StringLine")
 	original_string_color = string_line.color
-
-	# Highlight the correct string.
 	string_line.color = Color("#56DDF0")
 
 
-func _on_note_button_pressed(note_name: String) -> void:
-	# Ignore button presses after all questions have been answered.
+func _on_note_button_pressed(button: Button, note_name: String) -> void:
 	if question.is_empty():
 		return
 
-	# Store the note selected by the player.
-	answer = note_name
+	# .strip_edges() removes hidden whitespace/newlines causing comparison failures
+	answer = note_name.strip_edges()
+	var is_correct: bool = (answer == question)
 
-	# Check whether the selected note is correct.
-	check_answer()
+	# Flash green or red on the clicked button
+	show_button_feedback(button, is_correct)
+
+	# Advance question immediately
+	check_answer(is_correct)
 
 
-func check_answer() -> void:
-	# Award a point if the player's answer matches the question.
-	if answer == question:
+func check_answer(is_correct: bool) -> void:
+	if is_correct:
 		points += 1
 
-	# Count the question regardless of whether the answer was correct.
 	count += 1
 
-	# Remove this note so it cannot be asked again.
-	quiz.erase(question)
-
-	# Restore the previously highlighted string's original colour.
 	var string_line = strings.get_node(question).get_node("StringLine")
 	string_line.color = original_string_color
 
-	# Clear the current question so additional button presses
-	# cannot answer it more than once.
+	quiz.erase(question)
 	question = ""
 
-	# Move on to the next question or finish the level.
 	next_question()
 
 
 func next_question() -> void:
-	# Continue if there are questions remaining.
 	if not quiz.is_empty():
 		start_question()
 	else:
@@ -94,8 +66,39 @@ func next_question() -> void:
 
 
 func end_level() -> void:
-	# An empty question prevents further answers from being counted.
 	question = ""
+	EventBus.final_score = points
+	EventBus.total_questions = count
+	EventBus.current_level_score.emit(points, count)
 
-	# Display the final score.
-	print("You got %d/%d correct!" % [points, count])
+
+func show_button_feedback(button: Button, is_correct: bool) -> void:
+	var feedback_style := StyleBoxFlat.new()
+	
+	feedback_style.corner_radius_top_left = 6
+	feedback_style.corner_radius_top_right = 6
+	feedback_style.corner_radius_bottom_right = 6
+	feedback_style.corner_radius_bottom_left = 6
+	feedback_style.set_border_width_all(2)
+	feedback_style.content_margin_left = 16
+	feedback_style.content_margin_top = 8
+	feedback_style.content_margin_right = 16
+	feedback_style.content_margin_bottom = 8
+
+	if is_correct:
+		feedback_style.bg_color = Color("#1E4620")
+		feedback_style.border_color = Color("#4EFA8B")
+	else:
+		feedback_style.bg_color = Color("#581C1C")
+		feedback_style.border_color = Color("#FF5252")
+
+	# Override normal, hover, and pressed so the color shows under mouse cursor
+	button.add_theme_stylebox_override("normal", feedback_style)
+	button.add_theme_stylebox_override("hover", feedback_style)
+	button.add_theme_stylebox_override("pressed", feedback_style)
+
+	await get_tree().create_timer(1.0).timeout
+
+	button.remove_theme_stylebox_override("normal")
+	button.remove_theme_stylebox_override("hover")
+	button.remove_theme_stylebox_override("pressed")

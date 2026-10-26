@@ -2,7 +2,10 @@ extends Control
 
 @onready var keyboard_container: CenterContainer = $MarginContainer/VBoxContainer/KeyboardContainer
 
-const GAME_SCREEN = preload("uid://d2pfmc2ksoduw")
+# Preload END_SCREEN here (update path or UID to match your end_screen.tscn file)
+const END_SCREEN = preload("uid://4jrm660trv5o")
+
+
 const BASS_ALL_KEYBOARD = preload("uid://cd700ef6bphf")
 const BASS_OPEN_KEYBOARD = preload("uid://rrmmd783qttx")
 const LEVEL_1_OPEN = preload("uid://bpx1gad45he8b")
@@ -17,8 +20,15 @@ var current_level: int
 
 func _ready() -> void:
 	EventBus.current_level_selected.connect(_on_current_level_selected)
-	# Reads the level number stored in EventBus immediately when the scene loads
+	EventBus.current_level_score.connect(_on_current_level_score)
+	
+	# Load the selected level when GameScreen loads
 	_on_current_level_selected(EventBus.current_level)
+
+
+func _on_current_level_score(_score: int, _total: int) -> void:
+	# Switches to EndScreen when the level finishes
+	get_tree().change_scene_to_packed(END_SCREEN)
 
 
 func _on_current_level_selected(level: int) -> void:
@@ -35,60 +45,48 @@ func _on_current_level_selected(level: int) -> void:
 
 func level_1() -> void:
 	clear_current_level()
-	
 	var keyboard = BASS_OPEN_KEYBOARD.instantiate()
 	keyboard_container.add_child(keyboard)
-	
 	var level = LEVEL_1_OPEN.instantiate()
 	add_child(level)
 
 
 func level_2() -> void:
 	clear_current_level()
-	
 	var keyboard = BASS_ALL_KEYBOARD.instantiate()
 	keyboard_container.add_child(keyboard)
-	
 	var level = LEVEL_2_E.instantiate()
 	add_child(level)
 
 
 func level_3() -> void:
 	clear_current_level()
-	
 	var keyboard = BASS_ALL_KEYBOARD.instantiate()
 	keyboard_container.add_child(keyboard)
-	
 	var level = LEVEL_3_A.instantiate()
 	add_child(level)
 
 
 func level_4() -> void:
 	clear_current_level()
-	
 	var keyboard = BASS_ALL_KEYBOARD.instantiate()
 	keyboard_container.add_child(keyboard)
-	
 	var level = LEVEL_4_D.instantiate()
 	add_child(level)
 
 
 func level_5() -> void:
 	clear_current_level()
-	
 	var keyboard = BASS_ALL_KEYBOARD.instantiate()
 	keyboard_container.add_child(keyboard)
-	
 	var level = LEVEL_5_G.instantiate()
 	add_child(level)
 
 
 func level_6() -> void:
 	clear_current_level()
-	
 	var keyboard = BASS_ALL_KEYBOARD.instantiate()
 	keyboard_container.add_child(keyboard)
-	
 	var level = LEVEL_6_ALL_FRETS.instantiate()
 	add_child(level)
 
@@ -101,6 +99,3 @@ func clear_current_level() -> void:
 	for keyboard in get_tree().get_nodes_in_group("keyboards"):
 		if keyboard.get_parent() == keyboard_container:
 			keyboard.queue_free()
-
-func end_level() -> void:
-	get_tree().change_scene_to_packed(GAME_SCREEN)

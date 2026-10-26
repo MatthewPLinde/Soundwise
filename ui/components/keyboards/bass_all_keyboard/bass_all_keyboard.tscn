@@ -16,18 +16,26 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cc43h"]
 bg_color = Color(0.0627451, 0.10980392, 0.17254902, 1)
 
-[node name="Bass_All_Keyboard" type="Panel" unique_id=1133581484 groups=["keyboards"]]
-offset_right = 107.0
-offset_bottom = 86.0
+[node name="Bass_All_Keyboard" type="PanelContainer" unique_id=1288149282 groups=["keyboards"]]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -196.5
+offset_top = -205.0
+offset_right = 191.5
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_cc43h")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=392217019]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=1118227759]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 5
 columns = 4

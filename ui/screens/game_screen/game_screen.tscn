@@ -34,7 +34,7 @@ layout_mode = 2
 
 [node name="InstructionLabel" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=987999409]
 layout_mode = 2
-text = "Listen & Select Note"
+text = "Select Note"
 
 [node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/Header" unique_id=928207642]
 layout_mode = 2
